@@ -25,43 +25,38 @@ including
     \item European Centre for Medium-Range Weather Forecasts (ECMWF)
     \item Météo-France
 \end{itemize}\cite{a1}
-
+\\\\
 Key Components of Ensemble Prediction Systems:
 
 \begin{itemize}
     \item Base Models: Ensemble systems typically consist of multiple base models,
     each trained independently on the same or different datasets.
-    These base models can be diverse, using different algorithms, subsets of data, or variations in model parameters.
 
     \item Diversity: The effectiveness of ensemble methods relies on the diversity among the base models.
     If the models are too similar, the ensemble may not provide significant improvements.
-    Diversity can be achieved by using different algorithms, training data, or initial conditions.
 
     \item Combination Method:
     Ensemble methods employ a combination or aggregation method
     to merge the predictions of individual models into a single,
     more accurate prediction.
-    Common combination methods include averaging, weighted averaging, voting, stacking, and boosting.
 
     \item Weighting: In weighted averaging, each base model's prediction is assigned a weight,
     and the final prediction is a weighted sum of individual predictions.
-    The weights are often determined based on the historical performance or reliability of each model.
 
     \item Training and Validation: Base models are trained on historical data,
     and the ensemble system is validated and calibrated
-    using separate datasets to ensure its accuracy and reliability in making predictions on new,
-    unseen data.
+    using separate datasets to ensure its accuracy
 \end{itemize}
 
 An ensemble-based probabilistic precipitation forecasting scheme has been developed that blends an extrapolation nowcast with a downscaled NWP forecast,
 known as STEPS: Short-Term Ensemble Prediction System.
 The uncertainties in the motion and evolution of radar-inferred precipitation fields are quantified,
-and the uncertainty in the evolution of the precipitation pattern is shown to be the more important.
+and the uncertainty in the evolution of the precipitation pattern is shown to be the more important. \\\\
 The use of ensembles allows the scheme
 to be used for applications
 that require forecasts of the probability density function of areal and temporal averages of precipitation,
 such as fluvial flood forecasting—a capability
-that has not been provided by previous probabilistic precipitation nowcast schemes.
+that has not been provided by previous probabilistic precipitation nowcast schemes. \\\\
 The output from a NWP forecast model is downscaled
 so that the small scales not represented accurately by the model are injected into the forecast
 using stochastic noise.
@@ -69,7 +64,7 @@ This allows the scheme
 to better represent the distribution of precipitation rate at spatial scales finer than those
 adequately resolved by operational NWP\@.
 
-Advantages of Ensemble Forecasting:
+\subsubsection{Advantages of Ensemble Forecasting}
 \begin{itemize}
     \item Improved Accuracy:
     Ensemble forecasting often provides more accurate predictions than individual models
@@ -77,9 +72,6 @@ Advantages of Ensemble Forecasting:
 
     \item Quantifying Uncertainty: Ensemble systems offer a way to estimate the uncertainty associated with predictions.
     The spread or variability among ensemble members provides a measure of prediction confidence.
-
-    \item Robustness: Ensemble methods are more robust to outliers and noise in the data.
-    They can handle unexpected or extreme events better than single models.
 
     \item Reduced Overfitting:
     By combining multiple models with different training data or parameters,
@@ -92,17 +84,10 @@ Advantages of Ensemble Forecasting:
     making them adaptable to different prediction tasks and domains.
 \end{itemize}
 
-Disadvantages of Ensemble Forecasting:
+\subsubsection{Disadvantages of Ensemble Forecasting}
 \begin{itemize}
-    \item Computational Complexity:
-    Running and maintaining multiple models can be computationally intensive and require substantial resources,
-    particularly for real-time applications.
-
-    \item Increased Model Interpretability Challenge:
-    As the ensemble involves combining predictions from multiple models,
-    the interpretability of the overall system may be more challenging than understanding individual models.
-
-    \item Difficulty in Model Selection: Selecting appropriate models for the ensemble requires careful consideration,
+    \item Difficulty in Model Selection:
+    Selecting appropriate models for the ensemble requires careful consideration,
     and the effectiveness of the ensemble may be sensitive to the choice of models.
 
     \item Potential for Redundancy: If the base models in the ensemble are too similar,
@@ -116,5 +101,8 @@ Disadvantages of Ensemble Forecasting:
     Training multiple models requires additional time and computational resources compared to training a single model.
 \end{itemize}
 
+\subsubsection{Motivation}
+    Ensemble forecasting is the prevailing method used for weather forecasting worldwide today, by most of the major operational weather prediction facilities.
+    It is widely used because it is more accurate than individual models, and it provides a measure of prediction confidence.
 
 \end{document}
