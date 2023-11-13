@@ -1,8 +1,49 @@
 \documentclass[../paper.tex]{subfiles}
-
+% Preamble
+\documentclass[11pt]{article}
 % Document
 \begin{document}
 
+Ensemble forecasting is a method used in or within numerical weather prediction.
+Instead of making a single forecast of the most likely weather, a set (or ensemble) of forecasts is produced.
+This set of forecasts aims to give an indication of the range of possible future states of the atmosphere.
+Ensemble forecasting is a form of Monte Carlo analysis.
+The multiple simulations are conducted to account for the two usual sources of uncertainty in forecast models:
+\begin{itemize}
+    \item the errors introduced by the use of imperfect initial conditions, amplified by the chaotic nature of the evolution equations of the atmosphere, which is often referred to as sensitive dependence on initial conditions;
+    \item errors introduced because of imperfections in the model formulation, such as the approximate mathematical methods to solve the equations.
+\end{itemize}
+Ideally, the verified future atmospheric state should fall within the predicted ensemble spread,
+and the amount of spread should be related to the uncertainty (error) of the forecast.
+In general, this approach can be used to make probabilistic forecasts of any dynamical system,
+and not just for weather prediction.
+
+Today ensemble predictions are commonly made at most of the major operational weather prediction facilities worldwide, including:
+\begin{itemize}
+    \item National Centers for Environmental Prediction (NCEP of the US)
+    \item European Centre for Medium-Range Weather Forecasts (ECMWF)
+    \item United Kingdom Met Office
+    \item Météo-France
+\end{itemize}
+
+Key Components of Ensemble Prediction Systems:
+
+\begin{itemize}
+    \item Base Models: Ensemble systems typically consist of multiple base models, each trained independently on the same or different datasets.
+    These base models can be diverse, using different algorithms, subsets of data, or variations in model parameters.
+
+    \item Diversity: The effectiveness of ensemble methods relies on the diversity among the base models.
+    If the models are too similar, the ensemble may not provide significant improvements.
+    Diversity can be achieved by using different algorithms, training data, or initial conditions.
+
+    \item Combination Method: Ensemble methods employ a combination or aggregation method to merge the predictions of individual models into a single, more accurate prediction.
+    Common combination methods include averaging, weighted averaging, voting, stacking, and boosting.
+
+    \item Weighting: In weighted averaging, each base model's prediction is assigned a weight, and the final prediction is a weighted sum of individual predictions.
+    The weights are often determined based on the historical performance or reliability of each model.
+
+    \item Training and Validation: Base models are trained on historical data, and the ensemble system is validated and calibrated using separate datasets to ensure its accuracy and reliability in making predictions on new, unseen data.
+\end{itemize}
 
 
 \end{document}
