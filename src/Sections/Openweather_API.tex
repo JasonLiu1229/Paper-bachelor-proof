@@ -2,7 +2,38 @@
 
 % Document
 \begin{document}
+    OpenWeatherMap is a weather API that provides weather data for any location on the globe.
+    It uses machine learning (ML) to significantly advance both the accuracy and computing speed of global assemble forecasting models, a practice that was impossible only a few years ago\cite{b1}.
+    \\\\
+    OpenWeatherMap offers a variety of APIs, including the One Call API 3.0, which provides current weather and forecasts, minute forecast for 1 hour, hourly forecast for 48 hours, daily forecast for 8 days, and government weather alerts\cite{b1}.
+    The API also provides weather data for any timestamp for 40+ years historical archive and 4 days ahead forecast, daily aggregation of weather data for 40+ years archive and 1.5 years ahead forecast, hourly forecast for 4 days, 16 days forecast, and climatic forecast for 30 days\cite{b1}.
+    \\\\
+    In addition, OpenWeatherMap provides beautiful multi-layer maps that create the visual perception of weather.
+    You can choose from a set of OpenWeather Model layers such as wind, temperature, pressure, and others, or select radar data for a detailed precipitation picture\cite{b1}.
 
+    \subsubsection{Advantages}
+    Here are some of the advantages of OpenWeatherMap
+    \begin{itemize}
+        \item \textbf{Accuracy and speed} - OpenWeatherMap uses machine learning to significantly advance both the accuracy and computing speed of global assemble forecasting models, a practice that was impossible only a few years ago\cite{b1}.
+        \item \textbf{Global coverage} - OpenWeatherMap provides weather data for any location on the globe\cite{b1}.
+        \item \textbf{Historical data} - OpenWeatherMap provides weather data for any timestamp for 40+ years historical archive and 4 days ahead forecast, daily aggregation of weather data for 40+ years archive and 1.5 years ahead forecast, hourly forecast for 4 days, 16 days forecast, and climatic forecast for 30 days\cite{b1}.
+        \item \textbf{Multi-layer maps} - OpenWeatherMap provides beautiful multi-layer maps that create the visual perception of weather\cite{b1}.
+    \end{itemize}
 
+    \subsubsection{Disadvantages}
+    Here are some of the disadvantages of OpenWeatherMap
+    \begin{itemize}
+        \item \textbf{Limited free plan} - OpenWeatherMap offers a free plan that allows 60 calls per minute, one million calls per month, and 5-day forecast, but it does not include historical data\cite{b1}.
+    \end{itemize}
 
+    \subsubsection{Motivation}
+    OpenWeatherMap is a weather API that provides accurate weather data for any location on the globe.
+    Making use of the STEP algorithm explained previously.
+    Combining this algorithm with machine learning (ML) to significantly advance both the accuracy and computing speed.
+    \\\\
+    Also with the free plan we get up to 60 calls per minute, one million calls per month, and 5-day forecast, which is more than enough for our application.
+    Although the free plan doesn't include historical data, we can save the data and make our own historical data.
+    The Downside of this approach is that we have to wait for the data to be collected.
+    \\\\
+    In case we want forecast data for more than 5 days, we have to implement our own model to predict the weather (making use of the collected historical data), or upgrade to a paid plan.
 \end{document}
