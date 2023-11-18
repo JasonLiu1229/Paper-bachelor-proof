@@ -11,14 +11,29 @@
     GraphCast is trained on historical weather data from the European Centre for Medium-Range Weather Forecasts (ECMWF)'s ERA5 reanalysis archive\cite{e1}.
     \\\\
     It starts with the current state of Earth's weather and data about the weather six hours ago.
-    Then, it makes a prediction about what the weather will look like six hours from now.
-    GraphCast then feeds those predictions back into the model, performs the same calculation, and spits out longer-term forecasts\cite{e1}.
+    Then, it makes a prediction about what the weather will look like six hours from now.\\
+    GraphCast then feeds those predictions back into the model, performs the same calculation, and spits out longer-term forecasts\cite{e1}.\\
+    \begin{figure}[htbp]
+        \centerline{\includegraphics[width=0.4\textwidth]{../photos/multimesh_graphcast}}
+        \caption{Steps of GraphCast}
+        \label{fig:multimesh-graphcast}
+    \end{figure}\\
+    GraphCast's multiscale mesh representation. \\
+    a) First we insert the data into the model.
+    b) Then we perform GraphCast to predict data, we feed this data back into the model.
+    c) We perform GraphCast again to predict data, we feed this data back into the model and do this repeatedly.
+    d) The encoder component maps local regions of the input (the green boxes) into nodes of the multi-mesh graph representation.
+    e) The processor component performs a series of graph neural network (GNN) message passing steps to update the node features.
+    f) The decoder component maps the updated node features back to the output (the purple boxes).
+    g) The multi-mesh is a set of icosahedral meshes of increasing resolution, from the base mesh ($M^0$, 12 nodes) to the finest resolution ($M^6$ , 40, 962 nodes), which has uniform resolution across the globe.
+    Each node belongs to a particular mesh resolution, and is connected to all neighboring nodes at the same resolution, as well as higher resolutions.
+    The learned message-passing over the different meshes' edges happens simultaneously, so that each node is updated by all of its incoming edges.
     \\\\
     The package contains example code to run and train GraphCast.
     It also provides three pretrained models: GraphCast, the high-resolution model used in the GraphCast paper (0.25 degree resolution, 37 pressure levels),
     trained on ERA5 data from 1979 to 2017, Grap\_Cast\_small, a smaller, low-resolution version of GraphCast (1 degree resolution,
     13 pressure levels, and a smaller mesh), trained on ERA5 data from 1979 to 2015, useful to run a model with lower memory and compute constraints,
-    GraphCast\_operational, a high-resolution model (0.25 degree resolution, 13 pressure levels) pre-trained on ERA5 data from 1979 to 2017
+    GraphCast\_operational, a high-resolution model (0.25 degree resolution, 13 pressure levels) pretrained on ERA5 data from 1979 to 2017
     and fine-tuned on HRES data from 2016 to 2021\cite{e2}.
 
     \subsubsection{Advantages}
