@@ -14,20 +14,20 @@
     ViT-based architectures are especially well suited for modeling weather and climate phenomena
     since they naturally tokenize the spatial nature of multiscale data akin to different spatial-temporal inputs.
     Additionally,
-    they offer the opportunity to extend tokenization towards a wide range of multichannel features.\cite{d1}
+    they offer the opportunity to extend tokenization towards a wide range of multichannel features\cite{d1}.
     \subsubsection{Results highlights}
         Forecasting the future values of key weather variables at different temporal horizons is critical
         to ensuring the safety of communities and infrastructure around the world.\\
         ERA5 is the latest climate reanalysis produced by ECMWF,
         providing hourly data on many atmospheric,
-        land-surface and sea-state parameters together with estimates of uncertainty.\cite{d2} \\
+        land-surface and sea-state parameters together with estimates of uncertainty\cite{d2}. \\
         ERA5 reanalysis data from the ECMWF underlies as the key source of data for training
         and evaluating machine learning models on this task with performance of Operation
         IFS being the current state-of-the art numerical weather prediction baseline.\\
         ClimaX when fine-tuned on the same ERA5 data,
         even at medium resolutions 1.40625\textdegree already performs comparably,
         if not better than IFS on short and medium-range predictions,
-        while being substantially better at longer horizon predictions.\cite{d1}
+        while being substantially better at longer horizon predictions\cite{d1}.
         \begin{figure}[htbp]
         \centerline{\includegraphics[width=0.5\textwidth]{../photos/climax_ifs}}
         \caption{ClimaX vs IFS on global forecasting of key weather variables at different lead time horizons}
@@ -45,11 +45,16 @@
         The graphs on the first row show the RMSE (root mean squared error) of the predictions,
         while the graphs on the second row show the ACC (accuracy) of the predictions.
         The x-axis shows the lead time in days.
-        As we can see, for example, on the Z500 graph, both models start at \%accuracy 100 and 0 RMSE.\\
-        As the lead time increases, the accuracy of both models decreases, and the error increases.
+        As we can see, for example, on the Z500 graph, both models start at 100\% accuracy and 0 RMSE.\\
+        As the lead time increases, the accuracy of both models decreases, and the error increases.\\
         What a decrease in accuracy means is that the model is less confident in its predictions.\\
-        The lower the accuracy, the more uncertain the model is and the higher the error.
-        A higher error means that the model is less accurate and less trustworthy.
+        What an increase error means that the model is less accurate and less trustworthy.\\
+
+        For example, on the Z500 graphs, we can see that the accuracy of both models starts at 1.0 (100\%),
+        and decreases to around 0.6 (60\%) at 14-days lead time.\\
+        At the same time,
+        the RMSE of both models starts at 0
+        and increases to around 800 for ClimaX and 1000 for IFS at 14 days lead time.\\
         \\\\
         But as we can see, ClimaX performs somewhat comparably to IFS on short and medium-range predictions,
         while being substantially better at longer horizon predictions (in most of these graphs, 14 days and above).
