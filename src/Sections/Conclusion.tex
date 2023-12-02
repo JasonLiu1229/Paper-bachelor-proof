@@ -3,25 +3,30 @@
 % Document
 \begin{document}
     We have looked at a variety of different methods for simulating weather and climate.
-    We have looked at STEP, OpenWeatherMap, Meteomatics, ClimaX, and GraphCast.
+    We have looked at STEP, OpenWeatherMap, Meteomatics, ClimaX, and GraphCast, but what is the best method for our application?
     \\\\
-    There are many available methods for simulating weather and climate. \\
-    Some of them are more accurate than others, some of them are faster than others, and some of them are easier to use than others. \\
-    This includes trained models, APIs, and algorithms. \\
+    So if we look at the algorithms, we can see that this is not a good choice for our application.
+    We want an easy-to-use method, and this is not the case for algorithms, because we have to implement the algorithm ourselves and make sure that it works.
     \\\\
-    STEP is an algorithm for computing ensemble forecasts.
-    It is the standard method used in the industry for computing ensemble forecasts by a good deal of different weather forecasting agencies, including the European Centre for Medium-Range Weather Forecasts (ECMWF).
+    Now let's look at the APIs.
+    Both OpenWeatherMap and Meteomatics are easy to use, and provide a lot of different current and historical data.
+    The biggest downside of these APIs is that they are very limited in their free plan, in case we want to make more than 500 calls per day (1000 for OpenWeatherMap), we have to upgrade to a paid plan.
+    Not only that having access to deep historical data is not possible with these APIs, if we don't want to pay for it.
     \\\\
-    OpenWeatherMap and Meteomatics are APIs for accessing weather data.
-    They are both easy to use, and provide a lot of different current and historical data. \\
-    Both having their pros and cons, but overall, they both have a free plan, which makes them both viable options for our application. \\
+    Now let's look at the machine learning models.
+    Both ClimaX and GraphCast are very accurate, and very fast.
+    Both are pretrained and easy to implement in our application.
+    The biggest downside of these models is that they are black box models, meaning that it is not possible or hard to understand how they work.
+    (Not a downside that affects our application)
     \\\\
-    ClimaX and GraphCast are both machine learning models for weather and climate forecasting.
-    They are both very accurate, and very fast. \\
-    They both provide pretrained models, which makes them easier to implement in our application. \\
+    In general, the combination of an API and a machine learning model is the best option for our application.
+    We can make use of the API to get the current weather data and slowly build up our historical data.
+    In case the amount of API calls is not enough, we can make use of the machine learning model to predict the weather.
+    Also, in case we want concurrent weather data, we can make use of the machine learning model.
     \\\\
-    In general, these methods are all viable options for our application and knowing which one to use depends on the specific use case.
-    In case we want to be fully in control of the data, we can use STEP. \\
-    In case we want to use machine learning, we can use ClimaX or GraphCast, and make use of the pretrained models. \\
-    In case we want to use an API, we can use OpenWeatherMap or Meteomatics.
+    A good combination would be OpenWeatherMap and ClimaX\@.
+    This is because OpenWeatherMap has a free plan with 1000 calls per day (usually enough) and ClimaX is a well tested and accurate model.
+    A good alternative would be Meteomatics and ClimaX, this is because Meteomatics has pre\-made connectors to different program languages, which makes it easier to implement in our application.
+    Also, it has a python package that can be used to make API calls.
+    So in regard to implementation, Meteomatics is a better choice than OpenWeatherMap.
 \end{document}
