@@ -7,16 +7,73 @@
     Some we will look at are OpenWeatherMap and Meteomatics.
 
     \subsubsection{How does it work?}
+    In general, APIs work by sending a request to a server, and the server will then send a response back.
+    In our case we will provide some extra information in the request to specify what kind of data we want to receive.
+    The data we receive will be configured in different formats, such as JSON, XML, etc.
 
     \subsubsection{OpenWeatherMap}
+    OpenWeatherMap is a weather application programming interface (API) that provides weather data for any location on the globe.
+    It uses machine learning (ML) to significantly advance both the accuracy and computing speed of global assemble forecasting models, a practice that was impossible only a few years ago\cite{b1}.
+    \\\\
+    OpenWeatherMap offers a variety of APIs, including the One Call API 3.0, which provides current weather and forecasts, minute forecast for 1 hour, hourly forecast for 48 hours, daily forecast for 8 days, and government weather alerts\cite{b1}.
+    The API also provides weather data for any timestamp for 40+ years historical archive and 4 days ahead forecast, daily aggregation of weather data for 40+ years archive and 1.5 years ahead forecast, hourly forecast for 4 days, 16 days forecast, and climatic forecast for 30 days\cite{b1}.
+    \\\\
+    In addition, OpenWeatherMap provides beautiful multi-layer maps that create the visual perception of weather.
+    You can choose from a set of OpenWeather Model layers such as wind, temperature, pressure, and others, or select radar data for a detailed precipitation picture\cite{b1}.
 
     \subsubsection{Meteomatics}
+    Meteomatics is a global leader in weather intelligence\cite{c1}.
+    It specializes in high-resolution commercial weather forecasting, power output forecasting for wind, solar and hydro, weather data gathering from the lower atmosphere using Meteodrones, and weather data delivery via the Weather API\cite{c3}.
+    \\\\
+    Not only that meteomatics provides a lot of different connectors to different program languages, for instance Python (that is free of charge)\cite{c1}.
+    It also has a pre-made python package that can be used to make API calls\cite{c5}.
 
     \subsubsection{Meteomatics vs OpenWeatherMap}
+    There are some differences between Meteomatics and OpenWeatherMap.
+    First of all Meteomatics offers more features in its free plan, such as historical data of the past 24 hours, but the free plan is limited to 500 calls per day\cite{c1}.
+    OpenWeatherMap on the other hand offers a free plan that allows 60 calls per minute, one million calls per month, and 5-day forecast, but it does not include historical data\cite{b1}.
+    \\\\
+    Another advantage that Meteomatics provides is that they provide pre-made connectors, this makes it easier to implement the API in our application.
+    The data that they use are mostly the same, but like mentioned above, Meteomatics also makes use of Meteodrones to gather data from the lower atmosphere\cite{c3}.
+    If this makes their data more accurate is not known, but it is extra data that OpenWeatherMap does not have.
+    \\\\
+    Also, the response time of Meteomatics is faster than OpenWeatherMap.
+    While it is not directly stated how fast Openweathermap response time is, it is known that it takes at most 1s, while Meteomatics is around 30ms\cite{c1}.
 
     \subsubsection{How it can be used?}
+    We can make use of API calls to get weather data from different APIs.
+    Some interesting use cases are:
+    \begin{itemize}
+        \item \textbf{Self made historical data}: We can use the data from the APIs to create our own historical data.
+        This is useful because not all models or APIs provide historical data.
+        \item \textbf{Model training}: We can use the data from the APIs to train our models.
+        \item \textbf{Prediction}: We can use the data from the APIs to make predictions.
+        \item etc.
+    \end{itemize}
+    In general there are many use cases for APIs, and they are very versatile.
 
-    \subsubsection{Pros and Cons}
+    \subsubsection{Advantages of APIs}
+    Here are some of the advantages of APIs
+    \begin{itemize}
+        \item \textbf{Accuracy and speed} - OpenWeatherMap and Meteomatics uses machine learning to significantly advance both the accuracy and computing speed of global assemble forecasting models, a practice that was impossible only a few years ago.
+        \item \textbf{Global coverage} - OpenWeatherMap and Meteomatics provides weather data for any location on the globe.
+        \item \textbf{No computing power needed} - OpenWeatherMap and Meteomatics does not require any computing power from our side.
+        What we mean by that, is that the data is already processed and ready to use to make predictions.
+        \item \textbf{Multi-layer maps} - OpenWeatherMap and Meteomatics provides beautiful multi-layer maps that create the visual perception of weather.
+        \item \textbf{Easy to use} - OpenWeatherMap and Meteomatics are both easy to use, and provide a lot of different current and historical data.
+    \end{itemize}
+
+    \subsubsection{Disadvantages of APIs}
+    Here are some of the disadvantages of APIs
+    \begin{itemize}
+        \item \textbf{Limited free plan} - OpenWeatherMap offers a free plan that allows 60 calls per minute, one million calls per month, and 5-day forecast, but it does not include historical data.
+        Meteomatics offers a free plan that offers more features than OpenWeatherMap, but it is limited to 500 calls per day.
+        \item \textbf{No control over the data} - OpenWeatherMap and Meteomatics does not give us any control over the data.
+        We can only use the data that they provide.
+        \item \textbf{No control over the model} - OpenWeatherMap and Meteomatics does not give us any control over the model.
+        We can only make API calls to get the data, from the models they compute.
+    \end{itemize}
+    These disadvantages are not that big of a deal, because we can make use of the free plan, and we can make use of the data to train our own models.
 
 
 \end{document}
