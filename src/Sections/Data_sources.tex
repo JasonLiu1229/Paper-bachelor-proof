@@ -1,4 +1,5 @@
 \documentclass[../paper.tex]{subfiles}
+\usepackage{drftcite}
 
 % Document
 \begin{document}
@@ -9,7 +10,37 @@
     Some of the data sources we will look at are:
     \begin{itemize}
         \item ECMWF
-        \item
+        \item IoT
+        \item etc.
+    \end{itemize}
+    There are a lot more sources that some of the methods we will look at use, but we will only look at the ones that are widely used.
+    \\\\
+    \subsubsection{ECMWF}
+    The European Centre for Medium-Range Weather Forecasts (ECMWF) is an independent intergovernmental organisation supported by most of the nations of Europe and is based at Shinfield Park, Reading, United Kingdom.
+    The center's operational forecasts are produced from its ``Forecast System'' (sometimes informally known in the United States as the ``European model'') which is run every twelve hours and forecasts out to ten days\cite{b4}.
+    ECMWF is also developing their own digital twin, to predict weather and climate change\cite{b5}.
+    \\\\
+    ECMWF makes wide range os data available to the public.
+    The data that are becoming available are based on a range of high-resolution forecasts (HRES \- 9 km horizontal resolution) and ensemble forecasts (ENS – 18 km horizontal resolution). They will be made accessible at a resolution of 0.4 x 0.4 degrees \cite{ecmwf_data_free}.\\
+    \\\\
+    An overview of what kinds of data are available is given on the ECMWF website.
+    More detailed explanations of how to access the data are also available\cite{ecmwf_data_free}.\\
+    \subsubsection{IoT}
+    The Internet of Things (IoT) plays a significant role in collecting data for weather forecasting services.
+    Here's how it works:
 
+    \begin{itemize}
+        \item \textbf{Sensors}: IoT uses a network of sensors to collect real-time data on various weather parameters such as temperature, pressure, humidity, wind speed, and light intensity\cite{iot1, iot4}.
+        These sensors can be embedded in various devices and locations, including weather stations, agricultural fields, and even moving vehicles\cite{iot1, iot4}.
+        \item \textbf{Data Transmission}: The data collected by these sensors is then transmitted over the internet to a central monitoring system or cloud-based servers\cite{iot1, iot3}.
+        This allows for real-time monitoring and accessibility of data from anywhere in the world\cite{iot1}.
+        \item \textbf{Data Analysis}: The collected data is analyzed and processed using advanced algorithms and machine learning techniques.
+        This helps in predicting weather patterns and changes more accurately\cite{iot1, iot3}.
+        \item \textbf{Alerts and Notifications}: IoT systems can also be programmed to send alerts and notifications based on the data collected.
+        For instance, they can warn about sudden and drastic weather changes\cite{iot1}.
+        \item \textbf{Integration with Weather Models}: The data collected through IoT is often integrated with other weather forecasting models to improve their accuracy and reliability\cite{iot3}.
+    \end{itemize}
+
+    In summary, IoT brings a new era of weather forecasting by enabling the collection of real-time, hyper-local data, which significantly enhances the accuracy of weather predictions\cite{iot4}.
 
 \end{document}
